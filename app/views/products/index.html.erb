@@ -1,4 +1,3 @@
-<% @products.each do |p| %>
-  <%= p.name %>
-  <%= truncate p.description %>
+<% @products.each do |product| %>
+  <%= render partial: "product", locals: {post: post} %>
 <% end %>
