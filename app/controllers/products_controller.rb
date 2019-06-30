@@ -21,6 +21,7 @@ class ProductsController < ApplicationController
 
   def inventory
     @product = Product.find(params[:id])
+    render plain: @product.inventory?
   end
 private
     def product_params
